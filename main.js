@@ -17,7 +17,7 @@ const APIUrl = "https://flynn.boolean.careers/exercises/api/random/mail";
 
 //test Chiamata API con Fetch
 fetch(APIUrl)
-    .then(Response => Response.json())
+    .then(response => response.json())
     .then(data => {
         //loggato la risposta    
         console.log(data);
