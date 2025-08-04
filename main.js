@@ -16,12 +16,15 @@ Buon divertimento e confermate lettura come al solito  */
 const APIUrl = "https://flynn.boolean.careers/exercises/api/random/mail";
 
 //test Chiamata API con Fetch
-
 fetch(APIUrl)
     .then(Response => Response.json())
     .then(data => {
+        //loggato la risposta    
         console.log(data);
-
+        //inserito il valore della risposta dentro una variabile
+        const mailRandom = data.response;
+        //stampato mail arndom in pagina
+        document.writeln(mailRandom);
     })
     .catch(error => {
         console.error(error);
